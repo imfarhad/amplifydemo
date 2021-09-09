@@ -77,12 +77,14 @@ function App() {
         {
           notes.map(note => (
             <div key={note.id || note.name}>
+              <hr/>
               <h2>{note.name}</h2>
               <p>{note.description}</p>
-              <button onClick={() => deleteNote(note)}>Delete note</button>
               {
                 note.image && <img src={note.image} style={{width: 400}} alt="img"/>
               }
+              <br/>
+              <button onClick={() => deleteNote(note)}>Delete note</button>
             </div>
           ))
         }
